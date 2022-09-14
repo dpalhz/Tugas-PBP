@@ -2,16 +2,42 @@
 
  {% block content %}
 
-  <h1>Lab 1 Assignment PBP/PBD</h1>
+ <style>
+    *{
+      box-sizing: border-box;
+      
+    }
+    table{
+      width: 100%;
+      
+    }
+    .head{
+      background-color: aqua;
+    }
+    .title {
+      width: 100%;
+      font-family: sans-serif;
+      text-align: center;
+    }
 
-  <h5>Name: </h5>
-  <p>{{nama}}</p>
+    th {
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 3px;
+    }
 
-  <h5>Student ID: </h5>
-  <p>{{npm}}</p>
+
+
+ </style>
+
+  <h1 class="title">Lab 1 Assignment PBP/PBD</h1>
+
+  <h3>Name: {{nama}}</h3>
+  <h3>Student ID: {{npm}} </h3>
+  
 
   <table>
-    <tr>
+    <tr class="head">
       <th>Item Name</th>
       <th>Item Price</th>
       <th>Item Stock</th>
