@@ -1,0 +1,114 @@
+[
+    {
+        "model": "mywatchlist.filmitem",
+        "pk": 1,
+        "fields": {
+            "watched": true,
+            "title": "The Maze Runner: Scorch Trials",
+            "rating": 4,
+            "release_date": "17 September 2014",
+            "review": "The Maze Runner adalah sebuah film thriller aksi distopia fiksi ilmiah Amerika 2014 yang disutradarai oleh Wes Ball, berdasarkan novel dengan nama yang sama buatan James Dashner pada 2009"
+            
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk": 2,
+        "fields": {
+            "watched": true,
+            "title": "Avengers: Endgame",
+            "rating": 4.6,
+            "release_date": "24 April 2019",
+            "review": "Melanjutkan Avengers Infinity War, dimana kejadian setelah Thanos berhasil mendapatkan semua infinity stones dan memusnahkan 50% semua mahluk hidup di alam semesta. Akankah para Avengers berhasil mengalahkan Thanos?"
+            
+        }
+    },{
+        "model": "mywatchlist.filmitem",
+        "pk": 3,
+        "fields": {
+            "watched": false,
+            "title": "The Karate Kid",
+            "rating": 4.2,
+            "release_date": "10 Juni 2010",
+            "review": "The Karate Kid yang dikenal sebagai The Kung Fu Dream in China, adalah film drama seni bela diri wuxia 2010 yang disutradarai oleh Harald Zwart, dan bagian dari serial The Karate Kid"
+            
+        }
+    },{
+        "model": "mywatchlist.filmitem",
+        "pk": 4,
+        "fields": {
+            "watched": true,
+            "title": "Now You See Me",
+            "rating": 4.3,
+            "release_date": "31 Mei 2013",
+            "review": "Now You See Me merupakan sebuah film Amerika Serikat yang dirilis pada tahun 2013 Film yang disutradarai oleh Louis Leterrier ini pemainnya antara lain oleh Jesse Eisenberg, Mark Ruffalo, Woody Harrelson, Isla Fisher, Dave Franco, dan masih banyak lagi. Tanggal rilisnya pada 31 Mei 2013."
+            
+        }
+    },{
+        "model": "mywatchlist.filmitem",
+        "pk": 5,
+        "fields": {
+            "watched": false,
+            "title": "Train to Busan",
+            "rating": 4.8,
+            "release_date": "Juli 2016",
+            "review": "Train to Busan adalah sebuah film hantu seru bertema bencana mayat hidup asal Korea tahun 2016 yang disutradarai oleh Yeon Sang-ho dan dibintangi oleh Gong Yoo, Jung Yu-mi dan Ma Dong-seok. Film tersebut tayang perdana dalam sesi Penayangan Tengah Malam di Festival Film Cannes 2016 pada 13 Mei."
+            
+        }
+    },{
+        "model": "mywatchlist.filmitem",
+        "pk": 6,
+        "fields": {
+            "watched": false,
+            "title": "Parasite",
+            "rating": 4.5,
+            "release_date": "17 September 2014",
+            "review": "Keluarga Ki-taek beranggotakan empat orang pengangguran dengan masa depan suram menanti mereka. Suatu hari Ki-woo anak laki-laki tertua direkomendasikan oleh sahabatnya yang merupakan seorang mahasiswa dari universitas bergengsi agar Ki-woo menjadi guru les yang dibayar mahal dan membuka secercah harapan penghasilan tetap. Dengan penuh restu serta harapan besar dari keluarga, Ki-woo menuju ke rumah keluarga Park untuk wawancara. Setibanya di rumah Mr. Park pemilik perusahaan IT global, Ki-woo bertemu dengan Yeon-kyo, wanita muda yang cantik di rumah itu. Setelah pertemuan itu, serangkaian kejadian dimulai."
+            
+        }
+    },{
+        "model": "mywatchlist.filmitem",
+        "pk": 7,
+        "fields": {
+            "watched": true,
+            "title": "Jurassic World Dominion",
+            "rating": 3.8,
+            "release_date": "8 Juni 2022",
+            "review": "Empat tahun setelah kehancuran pulau Nublar, dinosaurus sekarang hidup dan berburu bersama manusia di seluruh dunia. Keseimbangan yang rapuh ini akan menentukan, apakah manusia akan tetap menjadi berada di puncak rantai makanan ketika berbagi wilayah dengan makhluk paling menakutkan dalam sejarah bumi."
+            
+        }
+    },{
+        "model": "mywatchlist.filmitem",
+        "pk": 8,
+        "fields": {
+            "watched": false,
+            "title": "Spider-Man: No Way Home",
+            "rating": 4.5,
+            "release_date": "15 Desember 2021",
+            "review": "Pertama kalinya dalam sejarah layar lebar Spider-Man, identitas asli dari pahlawan nan ramah ini terbongkar, sehingga membuat tanggung jawabnya sebagai seorang berkekuatan super berbenturan dengan kehidupan normalnya, dan menempatkan semua orang terdekatnya dalam posisi paling terancam."
+            
+        }
+    },{
+        "model": "mywatchlist.filmitem",
+        "pk": 9,
+        "fields": {
+            "watched":false,
+            "title": "Bumi Manusia",
+            "rating": 4.7,
+            "release_date": "15 Agustus 2019 ",
+            "review": "Ini adalah kisah dua anak manusia yang meramu cinta di atas pentas pergelutan tanah kolonial awal abad 20. Inilah kisah Minke dan Annelies. Cinta yang hadir di hati Minke untuk Annelies, membuatnya mengalami pergulatan batin tak berkesudahan. Dia, pemuda pribumi, Jawa totok. Sementara Annelies, gadis Indo Belanda anak seorang Nyai. Bapak Minke yang baru saja diangkat jadi Bupati, tak pernah setuju Minke dekat dengankeluarga Nyai, sebab posisi Nyai di masa itu dianggap sama rendah dengan binatang peliharaan."
+            
+        }
+    },{
+        "model": "mywatchlist.filmitem",
+        "pk": 10,
+        "fields": {
+            "watched": true,
+            "title": "Fast & Furious 9",
+            "rating": 3.9,
+            "release_date": "16 Juni 2021",
+            "review": "Dom Toretto (Vin Diesel) menjalani kehidupan yang tenang dengan Letty dan putranya, Brian kecil, tetapi mereka tahu bahwa bahaya selalu mengintai. Kali ini, ancaman itu akan memaksa Dom untuk menghadapi kesalahan dari masa lalunya jika dia ingin menyelamatkan orang yang paling dia cintai. Krunya bergabung bersama untuk menghentikan sesuatu yang dapat menghancurkan dunia. serangan dipimpin oleh pembunuh paling terampil dan pengemudi yang sangat handal dan juga merupakan saudara laki-laki Dom yang ditinggalkan, Jakob (John Cena)"
+            
+        }
+    }
+]
