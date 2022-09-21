@@ -20,5 +20,7 @@ _HyperText Markup Language_, atau HTML, adalah bahasa markup standar untuk dokum
 
 
 
+
+
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 
