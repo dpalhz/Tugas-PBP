@@ -1,59 +1,101 @@
-# Tugas 2: Pengenalan Aplikasi Django dan Models View Template (MVT) pada Django
+# PBP Django Project Template
 
-Dipa Alhaza (NPM 2106751543)
-Link Deploy: [https://tugas2pbp-dipa.herokuapp.com/](https://tugas2pbp-dipa.herokuapp.com/)
+Platform-Based Programming (CSGE602022) - Organized by the Faculty of Computer Science Universitas Indonesia, Odd Semester 2022/2023
 
 *Read this in other languages: [Indonesian](README.md), [English](README.en.md)*
 
-## Bagan _request client_ 
+## Introduction
 
-![image bagan](photo/Beige%20Colorful%20Minimal%20Flowchart%20Infographic%20Graph.png)
+This repository is a template that is designed to help students who take the Platform-Based Development/Programming Course (CSGE602022) to know the structure of a Django Web application project, including the files and configurations that are important in running the application. You can freely copy the contents of this repository or utilise this repository as a learning material and also as a starting code to build a Django Web application project.
 
-penjelasan:
+## How to Use
 
-1. User menggunakan Web browser untuk memberikan request berupa URLconf 
-2. Django secara default akan mengecek permintaan user pada `usrls.py`.
-3. `urls.py`, digunakan sebagai tempat untuk mengarahkan atau memilih View `views.py` sesuai yang diminta.
-4. Pada View, jika dibutuhkan data dari database, maka `views.py` akan meminta data (QuarySet) 
-   via Model `models.py` yang akan melakukan transaksi data pada Database.
-5.	Setelah Model `models.py`  mendapatkan data dari Database akan memberikan respon data kepada View  `views.py`.
-6.	view akan memilih Template (Webpage / `html`), jika template tersebut membutuhkan data, View akan mengirimkan 
-   data yang sudah diambil dari Model `models.py` untuk dapat digunakan pada template.
-   Fungsi View sebagai penghubung antara Model dan Template.
-7.	Template `html` akan ditampilkan berupa Webpage kepada USER.
+If you want to use the code template in this repository as a starter code for
+developing a Django Web application:
 
+1. Open the GitHub page of the code template repository and click "**Use this template**"
+   button to make a copy of the repository into your own GitHub account.
+2. Clone the new Django template repository from your GitHub account to a
+   location in the filesystem of your local development environment by using
+   Git:
 
+   ```shell
+   git clone <URL to your repository on GitHub> <path in local development environment>
+   ```
+3. Go to the location where the cloned repository is located in the local
+   development environment:
 
-##  kenapa menggunakan virtual environment?
+   ```shell
+   cd <path to the cloned repository>
+   ```
+4. Create a Python virtual environment named `env` inside the cloned repository
+   by using Python's `venv` module:
 
+   ```shell
+   python -m venv env
+   ```
+5. Activate the virtual environment:
 
-_Virtual environment_ digunakan untuk mengisolasi package serta dependencies dari aplikasi sehingga tidak bertabrakan dengan versi lain yang ada pada komputer. Secara sederhana, _virtual environment_ digunakan untuk menjaga versi tools atau eksternal library yang di-_install_ untuk suatu proyek kerja , sehingga ketika terjadi _update version_ (bisa perubahan fitur atau sintaks, sejenisnya) terhadap library tersebut, project django akan tetap berjalan dengan _version apps_  yang tersimpan di _virtual environment_. 
+   ```shell
+   # Windows
+   .\env\Scripts\activate
+   # Linux/Unix, e.g. Ubuntu, MacOS
+   source env/bin/activate
+   ```
+6. Verify the virtual environment has been activated by looking at the prompt
+   of your shell. Make sure there is a `env` prefix in your shell. For example:
 
+   ```shell
+   # Windows using `pwsh` shell
+   (env) PS C:\Users\RickeyAstley\my-django-app
+   # Linux/Unix, e.g. Ubuntu using `bash` shell
+   (env) rickeyastley@ubuntu:~/my-django-app
+   ```
 
-## Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
+   > Note: You can use [Visual Studio Code][] (with Python extension) or [PyCharm][]
+   > to open the source code directory that has a virtual environment directory.
+   > Both will detect the virtual environment and use the correct Python virtual
+   > environment. Furthermore, you can also run your shell directly in both text
+   > editor/IDE.
+7. Install the dependencies needed to build, test, and run the application:
 
-Project django dapat berjalan tanpa _virtual environment_ '`Env`. Env hanya menjaga version django pada project django kita, jika mau membuat proyek django secara lokal, cukup memastikan bahwa django sudah terinstall pada _environment_ lokal. Namun, `Env` sangat membantu dalam pengembangan proyek yang django yang memiliki host dimana proyek tersebut harus di-_deploy_ ke suatu platform, `Env` dapat menampung `requirements.txt`, yang menyimpan data _tools_ yang digunakan untuk membantu penyusunan Web tersebut.
+   ```shell
+   pip install -r requirements.txt
+   ```
+8. Run the Django Web application using local development server:
 
+   ```shell
+   python manage.py runserver
+   ```
+9. Open http://localhost:8000 in your favourite Web browser to see if the Web
+   application is running.
 
-## Penjelasan cara implementasi template program tugas-2 PBP
+## Deployment Example
 
-1.	Membuat repository dengan mengambil template yang sudah ada, kemudian di-_remote_ ke lokal repositori.
-2.	Pada file `views.py`, buat fungsi untuk me-_return_ _request_ url dengan mengarahkan pada file `katalog.html` 
-   sekaligus memberikan data field yang diambil pada file (database) di folder `fixtures`.
-3.	Melakukan routing untuk memetakan fungsi yang telah dibuat pada `views.py` dengan menambahkan path di file `urls.py` 
-   (pada folder katalog dan juga project_django[main url]).
-4.	Memetakan data yang didapatkan ke dalam HTML dengan sintaks dari Django untuk pemetaan data template dengan membuat kelas di file `models.py`.
-   (pada template yang dikasih, sudah dibuat class untuk pemetaannya).
-5.	lakukan _migrate_ untuk membuat skema model yang nantinya dapat diakses oleh html.
+The code template provided a GitHub workflow to deploy the sample Django Web
+application to [Heroku][], which is a Platform-as-a-Service (PaaS) provider
+that lets you to build and run a Web application on their infrastructure. You
+can read the instructions at [Tutorial 0][] to figure out how to configure the
+GitHub Actions to run the provided workflow in your repository.
 
-   Dengan cara:
-   Lakukan perintah python manage.py makemigrations untuk mempersiapkan migrasi skema model ke dalam database Django lokal. 
-   Jalankan perintah python manage.py migrate untuk menerapkan skema model yang telah dibuat ke dalam database Django lokal.
+For reference, the deployed Django Web application example from the original
+code template repository can be found at: https://django-pbp-template.herokuapp.com.
 
-6.	Edit file `katalog.html` sesuai kebutuhan.
+## Next Actions
 
-7.	Dalam proses deploy, pertama, buat apps baru di HEROKU, dan melakukan deploy dari fitur yang ada di web HEROKU, 
-   dengan membuat koneksi ke repositori github.
+If you have successfully created your own repository and set up the Django Web
+application project, you can start working on the weekly tutorials and assignments
+related to Django Web application development. 
 
-8.	Cara deploy lain, yang juga dapat digunakan [tutorial deploy lab 0](https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tutorial/tutorial-0#tutorial-melakukan-deploy-aplikasi-django-ke-heroku)
+If you found any issues or have ideas to improve the code template, feel free
+to discuss your proposal via the [issue tracker](https://github.com/pbp-fasilkom-ui/django-pbp-template/issues)
+and create a Pull Request (PR) containing your changes to the code template.
 
+## Credits
+
+This template was based on [PBP Odd Term 2021/2022](https://gitlab.com/PBP-2021/pbp-lab) written by 2021 Platform Based Programming Teaching Team ([@prakashdivyy](https://gitlab.com/prakashdivyy)) and [django-template-heroku](https://github.com/laymonage/django-template-heroku) written by [@laymonage, et al.](https://github.com/laymonage). This template is designed in such a way so that students can use this template as a starter and reference in doing assignments and their work.
+
+[Heroku]: https://www.heroku.com/
+[Tutorial 0]: https://pbp-fasilkom-ui.github.io/ganjil-2023/en/assignments/tutorial/tutorial-0
+[Visual Studio Code]: https://code.visualstudio.com/
+[PyCharm]: https://www.jetbrains.com/pycharm/
