@@ -2,7 +2,7 @@
 
 Dipa Alhaza (NPM 2106751543)
 
-lINK Deploy :
+LINK Deploy :
 
 HTML = [https://tugas2pbp-dipa.herokuapp.com/mywatchlist/html/](https://tugas2pbp-dipa.herokuapp.com/mywatchlist/html/)
 
