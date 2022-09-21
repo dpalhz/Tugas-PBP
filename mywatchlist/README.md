@@ -2,7 +2,7 @@
 
 Dipa Alhaza (NPM 2106751543)
 
-lINK Deploy :
+LINK Deploy :
 
 HTML = [https://tugas2pbp-dipa.herokuapp.com/mywatchlist/html/](https://tugas2pbp-dipa.herokuapp.com/mywatchlist/html/)
 
@@ -20,7 +20,7 @@ _HyperText Markup Language_, atau HTML, adalah bahasa markup standar untuk dokum
 
 
 ## Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
-Dalam pengembangan suatu platform, tentunya tidak lepas dari proses pengiriman data. pengiriman ini terjadi antara komputer ke server atau sebaliknya. jenis data yang dikirimkan juga bermacam-macam, seperti HTML,XML, dan JSON. oleh karena itu, platform perlu mengimplementasikan data delivery agar proses pengambilan atau request terhadap data ke server lebih teratur dan lancar.
+Dalam pengembangan suatu platform, tentunya tidak lepas dari proses pengiriman data. distribusi data ini terjadi antara client dan server. jenis data yang dikirimkan juga bermacam-macam, seperti HTML,XML, dan JSON. oleh karena itu, platform perlu mengimplementasikan data delivery agar proses pengambilan atau request terhadap data ke server lebih teratur dan lancar.
 
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
