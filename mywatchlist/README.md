@@ -1,9 +1,13 @@
 # Tugas 3: Pengimplementasian Data Delivery Menggunakan Django
 
 Dipa Alhaza (NPM 2106751543)
+
 lINK Deploy :
+
 HTML = [https://tugas2pbp-dipa.herokuapp.com/mywatchlist/html/](https://tugas2pbp-dipa.herokuapp.com/mywatchlist/html/)
+
 XML = [https://tugas2pbp-dipa.herokuapp.com/mywatchlist/xml/](https://tugas2pbp-dipa.herokuapp.com/mywatchlist/xml/)
+
 JSON = [https://tugas2pbp-dipa.herokuapp.com/mywatchlist/json/](https://tugas2pbp-dipa.herokuapp.com/mywatchlist/json/)
 
 ## Perbedaan antara JSON, XML, dan HTML!
