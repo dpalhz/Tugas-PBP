@@ -32,6 +32,7 @@ def show_mywatchlist(request):
     context = {
         'list_film': data_film_mywatchlist,
         'nama': 'Dipa Alhaza',
+        'npm': '2106751543',
         'pesan': pesan
 
     }

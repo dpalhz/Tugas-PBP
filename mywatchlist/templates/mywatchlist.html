@@ -5,18 +5,27 @@
         box-sizing: border-box;
         
     }
+    body{
+        padding: 0;
+        margin: 0;
+    }
+   
     table{
         width: 100%;
+        margin-top: 80px;
     }
     .head{
-        background-color: aqua;
+        background-color: blue;
+        color: white;
+      
+        
     }
     .title {
         width: 100%;
         font-family: sans-serif;
         text-align: center;
     }
-
+   
     th {
         text-align: center;
         border: 1px solid black;
@@ -29,46 +38,63 @@
         background: blue;
         margin: 20px;
         text-align: center;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
     }
+
+    .identitas{
+        padding: 0;
+        padding: 20px;
+        margin: 0 0 20 0;
+        width: 100%;
+        background-color: blue;
+        color: white;
+        position: fixed;
+        max-height: 60px;
+        top: 0;   
+    }
+
     </style>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mywatchlist</title>
 </head>
 
 <body>
     {% block content %}
-    <div class="status">{{pesan}}</div>
-    
-    <table>
-        <tr class="head">
-          <th>Judul Film</th>
-          <th>Tanggal rilis</th>
-          <th>Rating</th>
-          <th>Review</th>
-          <th>Ditonton</th>
-        </tr>
-        {% comment %} Add the data below this line {% endcomment %}
-        {% for data in list_film %}
-        <tr>
-            <th>{{data.title}}</th>
-            <th>{{data.release_date}}</th>
-            <th>{{data.rating}}</th>
-            <th>{{data.review}}</th>
-            {%if data.watched %}
-                <th>Sudah ditonton</th>
-            {% else %}
-                <th>Belum ditonton</th>
-            {% endif %}
-            
-        </tr>
-        {% endfor %}
-      </table>
+
+        <div class="identitas">
+            {{nama}}   ({{npm}})
+        </div>
+        
+ 
+        <table>
+            <tr class="head">
+              <th>Judul Film</th>
+              <th>Tanggal rilis</th>
+              <th>Rating</th>
+              <th>Review</th>
+              <th>Ditonton</th>
+            </tr>
+            {% comment %} Add the data below this line {% endcomment %}
+            {% for data in list_film %}
+            <tr>
+                <th>{{data.title}}</th>
+                <th>{{data.release_date}}</th>
+                <th>{{data.rating}}</th>
+                <th>{{data.review}}</th>
+                {%if data.watched %}
+                    <th>Sudah ditonton</th>
+                {% else %}
+                    <th>Belum ditonton</th>
+                {% endif %}
+                
+            </tr>
+            {% endfor %}
+          </table>
+
+      <div class="status">{{pesan}}</div>
     
     {% endblock content %}
     
