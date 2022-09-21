@@ -26,12 +26,15 @@ Dalam pengembangan suatu platform, tentunya tidak lepas dari proses pengiriman d
 python manage.py startapp mywatchlist
 ```
 2. Buka settings.py di folder project_django dan tambahkan aplikasi wishlist ke dalam variabel INSTALLED_APPS untuk mendaftarkan django-app yang sudah  dibuat ke dalam proyek Django. Contohnya adalah sebagai berikut.
+
 ![image penjelasan-1](photo/penjelasn-1.jpg)
 
 3. membuat sebuah folder bernama fixtures di dalam folder aplikasi `mywatchlist` dan membuat sebuah berkas bernama initial_mywatchlist_data.json yang berisi sebagai berikut.
+
 ![!image penjelasan-2](photo/penjelasn-2.jpg)
 
 4. Buka file `models.py` yang ada di folder `mywatchlist` dan tambahkan potongan kode berikut.
+
 ![!image penjelasan-3](photo/penjelasn-3.jpg)
 
 5. Lakukan perintah `python manage.py makemigrations` untuk mempersiapkan migrasi skema model ke dalam database Django lokal.
@@ -41,13 +44,17 @@ python manage.py startapp mywatchlist
 7. Jalankan perintah `python manage.py loaddata initial_mywatchlist_data.json` untuk memasukkan data tersebut ke dalam database Django lokal.
 
 8. Buka `views.py` yang ada pada folder `mywatchlist` dan buat sebuah fungsi yang menerima parameter request. hasil akhirnya sebagai berikut. fungsi ini berfungsi unutk mengarahkan atau mengembalikan data ke temapilan berbentuk HTML, XML , dan JSON
+
 ![!image penjelasan-4](photo/penjelasn-4.jpg)
 
 9. Tambahkan path `url` ke dalam `urlpatterns` di `urls.py` (di folder mywatchlist dan folder project_django) untuk mengakses fungsi yang sudah dibuat tadi. berikut contoh code
+
 ![!image penjelasan-5](photo/penjelasn-5.jpg)
+
 ![!image penjelasan-6](photo/penjelasn-6.jpg)
 
 11. membuat testing urls pada `test.py`, dengan kode sebagai berikut
+
 ![!image penjelasan-7](photo/penjelasn-7.jpg)
 
 12. Selesai.
