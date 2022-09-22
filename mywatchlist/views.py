@@ -24,7 +24,7 @@ def show_mywatchlist(request):
         if x.watched == True:
             cnt += 1
     
-    if cnt >= counObj/2:
+    if cnt >= counObj - cnt:
         pesan = "Selamat, kamu sudah banyak menonton!"
     else:
         pesan = "Wah, kamu masih sedikit menonton!"
