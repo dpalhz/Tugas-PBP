@@ -31,39 +31,39 @@ Kita dapat membuat `form` secara manual tanpa harus menggunakan form.as_table de
 python manage.py startapp todolist
 ```
 2. Membuat sebuah model di `model.py` seperti berikut.
-![image penjelasan-1](photo/Penjelasan1.jpg.jpg)
+![image penjelasan-1](photo/Penjelasan1.jpg)
 
 3. Lakukan perintah `python manage.py makemigrations` untuk mempersiapkan migrasi skema model ke dalam database Django lokal.
 
 4. Jalankan perintah `python manage.py migrate` untuk menerapkan skema model yang telah dibuat ke dalam database Django lokal.
 
 5. meregistrasi models ke admin site django. berikut kodenya.
-![image penjelasan-7](photo/Penjelasan7.jpg.jpg.jpg)
+![image penjelasan-7](photo/Penjelasan7.jpg)
 
 5. membuat laman login, register (sesuai dengan tutorial `lab 3` berupa html), todolist, dan create-task s file di folder Template.
 
 6. Membuat file baru bernama `forms.py` membuat sebuah class yang meng-inhirit ModelsForm untuk membuat custom form django. berikut representasi kodenya.
-![image penjelasan-6](photo/Penjelasan6.jpg.jpg.jpg)
+![image penjelasan-6](photo/Penjelasan6.jpg)
 
 
 7. membuat fungsi register, login, dan logout sebagai berikut
-![image penjelasan-2](photo/Penjelasan2.jpg.jpg)
+![image penjelasan-2](photo/Penjelasan2.jpg)
 fungsi register -> Untuk membuat sebuah regular akun
 fungsi login -> Untuk melakukan login + validasi user login (data user yang login akan di store ke Cookies)
 fungsi logout -> untuk keluar dari userlogin
 
 
 8. membuat fungsi `show_todolist` untuk mengatur tampilan laman yang berisikan todolist user yang login dan fungsi `create-task` untuk mengatur form masukan berupa info task yang kemudian di store ke database. representasi kodenya sebagai berikut.
-![image penjelasan-3](photo/Penjelasan3.jpg.jpg)
+![image penjelasan-3](photo/Penjelasan3.jpg)
 
 
 9. membuat fungsi fitur tambahan (bonus) yaitu fungsi `delete_item` untuk menghapus task dan `update_status` untuk membuat perubahan pada status sudah atau belum task dikerjakan.
 berikut representasi kodenya.
-![image penjelasan-4](photo/Penjelasan4.jpg.jpg)
+![image penjelasan-4](photo/Penjelasan4.jpg)
 
 
 10. mengatur url path di `urls.py`, berikut kodenya.
-![image penjelasan-5](photo/Penjelasan5.jpg.jpg)
+![image penjelasan-5](photo/Penjelasan5.jpg)
 
 
 11. Program di push ke github dan deploy ke heroku
