@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    button a{
+        text-decoration: none;
+        color: black;
+    
+    }
+
+    .create-task{
+        width: 100%;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    span{
+        color: blue;
+    }
+</style>
+<body>
+    {% block content %}
+    <div class="nav">
+        <ul>
+            <li>
+                <h3>Create Task <span>{{request.user}}</span></h3>
+                <h5>Last login session: {{ last_login }}</h5>
+            </li>
+            <li>
+                <button><a href="{% url 'todolist:show_todolist' %}">TodoList {{request.user}}</a></button>
+            </li>
+        </ul>
+    </div>
+
+    
+    <div class="create-task">
+        <form action="" method="POST">
+            {%csrf_token%}
+        <h4>Title:</h4>
+        {{form.title}}
+    
+        <h4>Complete:</h4>
+        {{form.isFinished}}
+       
+        <h4>Description:</h4>
+        {{form.description}}
+        
+        <br>
+        <input type="submit" name="submit" value="Simpan"/>
+        
+        </form>
+
+    </div>
+    
+    
+    
+    {% endblock content %}
+
+
+
+
+
+    
+</body>
+</html>

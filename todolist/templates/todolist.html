@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    body {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+   
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header-table{
+        background-color: bisque;
+    }
+    th{
+        border: 1px solid black;
+    }
+
+    button a{
+        text-decoration: none;
+    }
+
+    .daftar-task{
+        width: 100%;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    table{
+        width: 80%;
+    }
+    .hapus:hover{
+        background-color: red;
+        
+    }
+    button a:hover{
+        color: white;
+        
+    }
+
+    .update:hover{
+        background-color: blue;
+        
+    }
+    span{
+        color: blue;
+    }
+   
+</style>
+<body>
+    {% extends 'base.html' %}
+
+{% block content %}
+<div class="nav">
+    <ul>
+        <li>
+            <h3>Current user: <span>{{request.user}}</span></h3>
+            <h5>Last login session: {{ last_login }}</h5>
+        </li>
+        <li>
+            <button><a href="{% url 'todolist:create_task' %}">Add Task</a></button>
+            <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+        
+        </li>
+    </ul>
+</div>
+<div class="daftar-task">
+    <table>
+        <tr class="header-table">
+            <th>Title</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Update</th>
+            <th>Delate</th>
+        </tr>
+        {% for todo in todoList  %}
+        <tr>
+            <th><hh3>{{todo.title}}</h3></th>
+            <th><h3>{{todo.date}}</h3></th>
+            <th><h3>{{todo.description}}</h3></th>
+            <th>
+            {%if todo.isFinished %}
+                <h3>Selesai</h3>
+            {% else %}
+                <h3>Belum selesai</h3>
+            {% endif %}
+    
+            </th>
+            <th> <button class="update"><a href="{% url 'todolist:update_status' todo.id %}">Ubah status</a></button></th>
+            <th> <button class="hapus"><a href="{% url 'todolist:delete_item' todo.id %}">Hapus</a></button></th>
+        </tr>
+    
+        {% endfor %}
+    
+    </table>
+</div>
+
+{% endblock content %}
+
+
+
+    
+</body>
+</html>
+
+
+
