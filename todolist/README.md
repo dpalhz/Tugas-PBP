@@ -1,6 +1,9 @@
 Dipa Alhaza (NPM 2106751543)
 
 LINK Deploy :
+Login page: [https://tugas2pbp-dipa.herokuapp.com/todolist](https://tugas2pbp-dipa.herokuapp.com/todolist)
+Register page page : [https://tugas2pbp-dipa.herokuapp.com/todolist/register/](https://tugas2pbp-dipa.herokuapp.com/todolist/register/)
+
 
 # Tugas 4: Pengimplementasian Form dan Autentikasi Menggunakan Django
 
