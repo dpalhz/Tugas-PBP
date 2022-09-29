@@ -6,6 +6,8 @@ Login page: [https://tugas2pbp-dipa.herokuapp.com/todolist](https://tugas2pbp-di
 
 Register page page : [https://tugas2pbp-dipa.herokuapp.com/todolist/register/](https://tugas2pbp-dipa.herokuapp.com/todolist/register/)
 
+Add task page : [https://tugas2pbp-dipa.herokuapp.com/todolist/create-task/](https://tugas2pbp-dipa.herokuapp.com/todolist/create-task/)
+
 
 # Tugas 4: Pengimplementasian Form dan Autentikasi Menggunakan Django
 
