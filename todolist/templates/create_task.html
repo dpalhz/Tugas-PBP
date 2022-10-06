@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,61 +8,47 @@
     <title>Document</title>
 </head>
 
-<style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    button a{
-        text-decoration: none;
-        color: black;
-    
-    }
-
-    .create-task{
-        width: 100%;  
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
-    span{
-        color: blue;
-    }
-</style>
 <body>
+    
+    
     {% block content %}
-    <div class="nav">
-        <ul>
-            <li>
-                <h3>Create Task <span>{{request.user}}</span></h3>
-                <h5>Last login session: {{ last_login }}</h5>
-            </li>
-            <li>
-                <button><a href="{% url 'todolist:show_todolist' %}">TodoList {{request.user}}</a></button>
-            </li>
-        </ul>
-    </div>
+    <nav class="nav nav-pills nav-fill bg-dark py-2">
+        <a class="nav-link active text-light" aria-current="page" href="#">username: {{request.user}}</a>
+        <a class="nav-link text-light" href="{% url 'todolist:show_todolist' %}">Todolist</a>
+        <a class="nav-link text-light" href="{% url 'todolist:logout' %}">Logout</a>
+      </nav>
+
+      <h5 class="h6">Last login session: {{ last_login }}</h5>
+
 
     
     <div class="create-task">
         <form action="" method="POST">
             {%csrf_token%}
-        <h4>Title:</h4>
-        {{form.title}}
-    
-        <h4>Complete:</h4>
-        {{form.isFinished}}
-       
-        <h4>Description:</h4>
-        {{form.description}}
-        
+
+            <div class="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center border rounded p-5 h-50">
+                <div class="d-flex flex-column position-relative">
+                    <div>
+                        <label class="m-2 p-2">Username</label>
+                        <label class="m-2 p-2">{{form.title}}</label>
+                        
+                    </div>
+                    <div>
+                        <label class="m-2 p-2">Complate</label>
+                        <label class="m-2 p-2">{{form.isFinished}}</label>
+                    </div>
+
+                    <div>
+                        <label class="m-2 p-2">Deskripsi</label>
+                        <label class="m-2 p-2">{{form.description}}</label>
+                        
+                    </div>
+                </div>
+                <input type="submit" name="submit" value="Simpan"/>
+            </div>
+            
         <br>
-        <input type="submit" name="submit" value="Simpan"/>
+        
         
         </form>
 

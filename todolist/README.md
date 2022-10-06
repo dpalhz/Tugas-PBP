@@ -80,6 +80,76 @@ berikut representasi kodenya.
 
 11. Program di push ke github dan deploy ke heroku
 
+# Styling pages
+
+## perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+
+### Internal CSS
+
+Internal CSS adalah kode CSS yang ditulis di dalam tag <style> dan kode HTML dituliskan di bagian atas (header) file HTML. Internal CSS dapat digunakan untuk membuat tampilan pada satu halaman website dan tidak digunakan pada halaman website yang lain.
+
+### External CSS
+
+Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML Eksternal CSS ditulis di sebuah file khusus yang berekstensi .css. File eksternal CSS biasanya diletakkan setelah bagian <head> pada halaman.
+
+### Inline CSS
+
+Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setiap elemen HTML memiliki atribut style, di situ lah inline CSS ditulis.
+
+## Macam-macam TAG HTML
+`<!DOCTYPE>`	Tag untuk menentukan tipe dokumen
+`<html>`	    Tag untuk membuat sebuah dokumen HTML
+`<title>`	    Tag untuk membuat judul dari sebuah halaman
+`<body>`	    Tag untuk membuat tubuh dari sebuah halaman
+`<h1> to <h6>`	Tag untuk membuat heading
+`<p>`	        Tag untuk membuat paragraf
+`<br>`	        Memasukan satu baris putus
+`<hr>`	        Tag untuk membuat perubahan dasar kata didalam isi
+`<!--...-->`	Tag untuk membuat komentar
+`<form>`	    Tag untuk membuat sebuah form HTML untuk input pengguna
+`<input>`	    Tag untuk membuat sebuah kontrol input
+`<textarea>`	Tag untuk membuat sebuah kontrol input multibaris (text area)
+`<button>`	    Tag untuk membuat sebuah tombol yang dapat diklik
+`<select>`	    Tag untuk membuat sebuah daftar drop-down
+`<img>`	        Tag untuk membuat gambar
+`<a>`	        Tag untuk membuat hyperlink
+`<link>`	    Tag untuk membuat hubungan antara dokumen dan sumber daya eksternal (paling sering digunakan untuk link ke style sheet)
+`<nav>`	        Tag untuk membuat navigasi link (tag baru HTML5)
+`<style>`	    Tag untuk membuat informasi style untuk dokumen
+`<div>`	        Tag untuk membuat sebuah bagian dalam dokumen
+`<span>`	    Tag untuk membuat sebuah bagian dalam dokumen
+`<header>`	    Tag untuk membuat sebuah header untuk dokumen atau bagian (tag baru HTML5)
+`<footer>`	    Tag untuk membuat footer untuk dokumen atau bagian (tag baru HTML5)
+`<hgroup>`	    Pengelompokan elemen heading (<h1> sampai <h6>) (tag baru HTML5)
+`<section>`	    Tag untuk membuat bagian dalam dokumen (tag baru HTML5)
+`<article>`	    Tag untuk membuat sebuah artikel (tag baru HTML5)
+`<aside>`	    Tag untuk membuat konten lain selain dari konten halaman (tag baru HTML5)
+
+
+## Tipe Selector di CSS
+
+1. SeleKtor Tag = Selektor ini akan memilih elemen berdasarkan nama tag.
+
+2. Selektor Class = selektor yang memilih elemen berdasarkan nama class yang diberikan. Selektor class dibuat dengan tanda titik di depannya.contohnya `.namaClass`
+
+3.Selektor ID = Selektor ID hampir sama dengan class. Bedanya, ID bersifat unik. Hanya boleh digunakan oleh satu elemen saja. Selektor ID ditandai dengan tanda pagar `(#)` di depannya. Contohnya, `#namaId`
+
+4.Selektor Atribut = selektor yang memilih elemen berdasarkan atribut. Selektor ini hampir sama seperti selektor Tag. 
+contohnya `input[type=text]`, Artinya kita akan memilih semua elemen `<input>` yang memiliki atribut `type='text'`.
+
+5.Selektor Universal = Selektor universal adalah selektor yang digunakan untuk menyeleksi semua elemen pada jangkauan (scope)tertentu dengan menggunakan (`*`).
+
+6. Pseudo Selektor = selektor untuk memilih elemen semu seperti state pada elemen, elemen before dan after, elemen ganjil, dan sebagainya.
+
+Ada dua macam pseudo selektor:
+
+    1. pseudo-class selektor untuk state elemen;
+    2.pseudo-element selektor untuk elemen semu di HTML.
+
+## Cara Implementasi Styling Pages
+
+1. copy link CDN Bootstrap, lalu di taruh pada kode HTML (link tersebut di `base.html`).
+2. edit tag html di folder template sesuai ketentuan bootstrap.
 
 
 

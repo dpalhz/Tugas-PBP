@@ -6,29 +6,47 @@
 
 {% block content %}  
 
-<div class = "login">
+<div class = "position-absolute top-50 start-50 translate-middle h-50 d-flex flex-column align-items-center p-5 h-100">
     
-    <h1>Formulir Registrasi</h1>  
+    <h1 class="m-5">Registrasi</h1>  
 
-        <form method="POST" >  
+        <form method="POST" class="d-flex flex-column align-items-center" >  
             {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
-        Sudah mempunyai akun? <a href="{% url 'todolist:login' %}">Login</a>
+                <!-- {{ form.as_table }}   -->
+                <!-- {{ form.as_p }}  -->
+                <div class="d-flex flex-column position-relative">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label class="m-2 p-2">Username</label>
+                        <label class="m-2 p-2">{{form.username}}</label>
+                        
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <label class="m-2 p-2">Password</label>
+                        <label class="m-2 p-2">{{form.password1}}</label>
+                    </div>
+    
+                    <div class="d-flex justify-content-between">
+                        <label class="m-2 p-2">Confirm Password </label>
+                        <label class="m-2 p-2">{{form.password2}}</label>
+                        
+                    </div>
+                </div>
+                
+               
 
-    {% if messages %}  
+                <div class="m-2"><input class="btn btn-dark m-2 text-center" type="submit" name="submit" value="Daftar"/></div>
+           
+        </form>
+        <!-- {% if messages %}  
         <ul>   
             {% for message in messages %}  
                 <li>{{ message }}</li>  
                 {% endfor %}  
         </ul>   
-    {% endif %}
+        {% endif %} -->
+        Sudah mempunyai akun? <a href="{% url 'todolist:login' %}">Login</a>
+
+    
 
 </div>  
 
