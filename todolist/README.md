@@ -97,32 +97,59 @@ Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML Eksternal C
 Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setiap elemen HTML memiliki atribut style, di situ lah inline CSS ditulis.
 
 ## Macam-macam TAG HTML
+
 `<!DOCTYPE>`	Tag untuk menentukan tipe dokumen
+
 `<html>`	    Tag untuk membuat sebuah dokumen HTML
+
 `<title>`	    Tag untuk membuat judul dari sebuah halaman
+
 `<body>`	    Tag untuk membuat tubuh dari sebuah halaman
+
 `<h1> to <h6>`	Tag untuk membuat heading
+
 `<p>`	        Tag untuk membuat paragraf
+
 `<br>`	        Memasukan satu baris putus
+
 `<hr>`	        Tag untuk membuat perubahan dasar kata didalam isi
+
 `<!--...-->`	Tag untuk membuat komentar
+
 `<form>`	    Tag untuk membuat sebuah form HTML untuk input pengguna
+
 `<input>`	    Tag untuk membuat sebuah kontrol input
+
 `<textarea>`	Tag untuk membuat sebuah kontrol input multibaris (text area)
+
 `<button>`	    Tag untuk membuat sebuah tombol yang dapat diklik
+
 `<select>`	    Tag untuk membuat sebuah daftar drop-down
+
 `<img>`	        Tag untuk membuat gambar
+
 `<a>`	        Tag untuk membuat hyperlink
+
 `<link>`	    Tag untuk membuat hubungan antara dokumen dan sumber daya eksternal (paling sering digunakan untuk link ke style sheet)
+
 `<nav>`	        Tag untuk membuat navigasi link (tag baru HTML5)
+
 `<style>`	    Tag untuk membuat informasi style untuk dokumen
+
 `<div>`	        Tag untuk membuat sebuah bagian dalam dokumen
+
 `<span>`	    Tag untuk membuat sebuah bagian dalam dokumen
+
 `<header>`	    Tag untuk membuat sebuah header untuk dokumen atau bagian (tag baru HTML5)
+
 `<footer>`	    Tag untuk membuat footer untuk dokumen atau bagian (tag baru HTML5)
+
 `<hgroup>`	    Pengelompokan elemen heading (<h1> sampai <h6>) (tag baru HTML5)
+
 `<section>`	    Tag untuk membuat bagian dalam dokumen (tag baru HTML5)
+
 `<article>`	    Tag untuk membuat sebuah artikel (tag baru HTML5)
+
 `<aside>`	    Tag untuk membuat konten lain selain dari konten halaman (tag baru HTML5)
 
 
