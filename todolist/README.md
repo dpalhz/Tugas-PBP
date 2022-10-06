@@ -153,9 +153,9 @@ Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setia
 
 ## Tipe Selector di CSS
 
-1. SeleKtor Tag = Selektor ini akan memilih elemen berdasarkan nama tag.
+1.SeleKtor Tag = Selektor ini akan memilih elemen berdasarkan nama tag.
 
-2. Selektor Class = selektor yang memilih elemen berdasarkan nama class yang diberikan. Selektor class dibuat dengan tanda titik di depannya.contohnya `.namaClass`
+2.Selektor Class = selektor yang memilih elemen berdasarkan nama class yang diberikan. Selektor class dibuat dengan tanda titik di depannya.contohnya `.namaClass`
 
 3.Selektor ID = Selektor ID hampir sama dengan class. Bedanya, ID bersifat unik. Hanya boleh digunakan oleh satu elemen saja. Selektor ID ditandai dengan tanda pagar `(#)` di depannya. Contohnya, `#namaId`
 
@@ -167,8 +167,7 @@ contohnya `input[type=text]`, Artinya kita akan memilih semua elemen `<input>` y
 6. Pseudo Selektor = selektor untuk memilih elemen semu seperti state pada elemen, elemen before dan after, elemen ganjil, dan sebagainya.
 
 Ada dua macam pseudo selektor:
-
-    1. pseudo-class selektor untuk state elemen;
+    1.pseudo-class selektor untuk state elemen;
     2.pseudo-element selektor untuk elemen semu di HTML.
 
 ## Cara Implementasi Styling Pages
