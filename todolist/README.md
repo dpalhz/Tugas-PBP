@@ -164,7 +164,7 @@ contohnya `input[type=text]`, Artinya kita akan memilih semua elemen `<input>` y
 
 5.Selektor Universal = Selektor universal adalah selektor yang digunakan untuk menyeleksi semua elemen pada jangkauan (scope)tertentu dengan menggunakan (`*`).
 
-6. Pseudo Selektor = selektor untuk memilih elemen semu seperti state pada elemen, elemen before dan after, elemen ganjil, dan sebagainya.
+6.Pseudo Selektor = selektor untuk memilih elemen semu seperti state pada elemen, elemen before dan after, elemen ganjil, dan sebagainya.
 
 Ada dua macam pseudo selektor:
     1.pseudo-class selektor untuk state elemen;
