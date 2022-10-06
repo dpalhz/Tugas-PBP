@@ -80,7 +80,7 @@ berikut representasi kodenya.
 
 11. Program di push ke github dan deploy ke heroku
 
-# Styling pages
+# Tugas 5: Web Design Using HTML, CSS, and CSS Framework
 
 ## perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
 
