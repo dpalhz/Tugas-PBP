@@ -144,8 +144,6 @@ Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setia
 
 `<footer>`	    Tag untuk membuat footer untuk dokumen atau bagian (tag baru HTML5)
 
-`<hgroup>`	    Pengelompokan elemen heading (<h1> sampai <h6>) (tag baru HTML5)
-
 `<section>`	    Tag untuk membuat bagian dalam dokumen (tag baru HTML5)
 
 `<article>`	    Tag untuk membuat sebuah artikel (tag baru HTML5)
