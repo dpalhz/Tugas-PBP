@@ -2,7 +2,7 @@ Dipa Alhaza (NPM 2106751543)
 
 LINK Deploy :
 
-[https://tugas2pbp-dipa.herokuapp.com/todolist/login/](https://tugas2pbp-dipa.herokuapp.com/todolist)
+[https://tugas2pbp-dipa.herokuapp.com/todolist](https://tugas2pbp-dipa.herokuapp.com/todolist/login/)
 
 
 
