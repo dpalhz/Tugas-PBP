@@ -10,7 +10,6 @@
 
 <body>
     
-    
     {% block content %}
     <nav class="nav nav-pills nav-fill bg-dark py-2">
         <a class="nav-link active text-light" aria-current="page" href="#">username: {{request.user}}</a>
@@ -19,7 +18,6 @@
       </nav>
 
       <h5 class="h6">Last login session: {{ last_login }}</h5>
-
 
     
     <div class="create-task">
@@ -48,13 +46,10 @@
             </div>
             
         <br>
-        
-        
         </form>
 
     </div>
-    
-    
+
     
     {% endblock content %}
 

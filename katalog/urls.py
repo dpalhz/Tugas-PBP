@@ -5,5 +5,5 @@ from katalog.views import index
 app_name = 'wishlist'
 
 urlpatterns = [
-    path('', index, name='katalog'),
+    path('', index, name='show_katalog'),
 ]

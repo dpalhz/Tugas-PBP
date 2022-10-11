@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model</title>
+
+</head>
+<body>
+    <nav class="nav nav-pills nav-fill bg-dark py-2">
+        <a class="nav-link active text-light" aria-current="page" href="#">username: {{request.user}}</a>
+        <a class="nav-link text-light" href="{% url 'todolist:create_task' %}">Tambah task</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-ajax">Modal Add Task</button>
+        <a class="nav-link text-light" href="{% url 'todolist:logout' %}">Logout</a>
+    
+    </nav>
+
+    <div class="w-80 d-flex">
+      <table class="table table-striped ">
+          <thead>
+            <tr class="">
+              <th class="text-center" scope="col">TodoList</th>
+            </tr>
+          </thead>
+          <tbody id="content">
+            
+          </tbody>  
+        </table>
+  </div>
+    
+  
+
+    </div>
+          <!-- modal -->
+         <div class="modal fade" id="modal-ajax" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Add Task</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="form" method="POST">
+                    {% csrf_token %}
+                      <div class="mb-3">
+                        <label for="title" class="col-form-label">Judul</label>
+                        <input type="text" name="title" class="form-control" id="title" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="description" class="col-form-label">Deskripsi</label>
+                        <textarea class="form-control" id="description"  name="description" required></textarea>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"  name="isFinisihed">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Complate
+                        </label>
+                      </div>
+      
+                      <input type="submit" class="btn btn-primary" data-bs-dismiss="modal"></input>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+        </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+let massage = ""
+
+$(document).ready(() => {
+  $.get('/todolist/json', (task) => {
+    console.log(task)
+  task.forEach((task) => {  
+
+  if(task.fields.isFinished==false){
+    massage = "Belum Selesai"
+
+  }else{
+    massage = "Selesai"
+  }
+  $('#content').append(`
+          <tr>
+            <td class="d-flex flex-column align-items-center" >
+                <div class="card " style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">${task.fields.title}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">${task.fields.date}</h6>
+                    <p class="card-text">${task.fields.description}</p>
+                    <h6 class="card-subtitle mb-2 text-muted">${massage}</h6>
+                    
+                    
+                    <a class="btn btn-primary" href="update-status-item-ajax/${task.pk}/" class="card-link">Update</a>
+                    <a  class="btn btn-danger" href="delete-item-ajax/${task.pk}/" class="card-link">Hapus</a>
+                    </div>
+                </div>
+            
+            </td> 
+          </tr>
+          `)
+  })
+})
+
+  $('#form').submit((e) => {
+    e.preventDefault();
+    $.ajax({
+        url: '/todolist/add/',
+        type: 'POST',
+        dataType: 'json',
+        data: $('#form').serialize(),
+        success: (resp) => {
+            console.log(resp)
+            let massage = ""
+            if(resp.isFinished==false){
+              massage = "Belum Selesai"
+
+            }else{
+              massage = "Selesai"
+            }
+            $('#content').append(`
+            <tr>
+              <td class="d-flex flex-column align-items-center" >
+                  <div class="card " style="width: 18rem;">
+                      <div class="card-body">
+                      <h5 class="card-title">${resp.title}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">${resp.date}</h6>
+                      <p class="card-text">${resp.description}</p>
+                      <h6 class="card-subtitle mb-2 text-muted">${massage}</h6>
+                      
+                      
+                      <a class="btn btn-primary" href="update-status-item-ajax/${resp.pk}/" class="card-link">Update</a>
+                      <a  class="btn btn-danger" href="delete-item-ajax/${resp.pk}/" class="card-link">Hapus</a>
+                      </div>
+                  </div>
+              
+              </td> 
+            </tr>
+            `)
+        },
+    })
+  })
+})
+
+
+</script>
+{% endblock content %}
+</body>
+</html>
+
+

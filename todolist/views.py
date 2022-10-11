@@ -1,4 +1,6 @@
 from ast import If
+from hashlib import new
+from turtle import title
 from django.shortcuts import render
 from . import forms
 
@@ -14,7 +16,8 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 
 import datetime
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
+from django.core import serializers
 from django.urls import reverse
 
 from .models import Task
@@ -97,3 +100,43 @@ def update_status(request, id):
     obj.isFinished^=True
     obj.save()
     return redirect('todolist:show_todolist')
+
+
+def show_json(request):
+    data = Task.objects.all()
+    task_item = data.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", task_item), content_type="application/json")
+
+def ajax_submit(request):
+    if (request.method == 'POST'):
+        user = request.user
+        data = {}
+        form = forms.TodoListForm(request.POST or None)
+        if (form.is_valid()):
+            title = form.cleaned_data['title']
+            deskripsi = form.cleaned_data['description']
+            isFinished = form.cleaned_data['isFinished']
+            new_data = Task.objects.create(user=user, title=title, description=deskripsi, isFinished=isFinished)
+            data["title"] = title
+            data["description"] = deskripsi
+            data["isFinished"] = isFinished
+            data["pk"] = new_data.pk
+            data["date"] = new_data.date
+            new_data.save()
+            return JsonResponse(data)
+
+def delete_item_ajax(request,id):
+    form = Task.objects.filter(pk=id)
+    form.delete()
+    return HttpResponseRedirect(reverse('todolist:model'))
+
+
+def update_status_ajax(request, id):
+    obj = Task.objects.get(pk=id)
+    obj.isFinished^=True
+    obj.save()
+    return HttpResponseRedirect(reverse('todolist:model'))
+    
+
+def show_model_fitur(request):
+    return render(request,'todolist_modelAjax.html')
