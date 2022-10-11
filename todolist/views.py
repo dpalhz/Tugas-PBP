@@ -1,6 +1,3 @@
-from ast import If
-from hashlib import new
-from turtle import title
 from django.shortcuts import render
 from . import forms
 
@@ -25,8 +22,6 @@ from .models import Task
 
 
 # def create_tast(request):
-
-
 def register(request):
     form = UserCreationForm()
 
