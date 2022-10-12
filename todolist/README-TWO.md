@@ -23,7 +23,7 @@ Event Handler adalah komponen yang melakukan aksi ketika terjadi sebuah event.
 4. EventLoop
 Event Loop berfungsi mencari event-event yang ada pada sebuah sistem berbasis event. Proses event loop berlangsung secara terus menerut (loop), sampai sebuah aksi atau event muncul yang mengakhiri proses event loop tersebut.
 
-## penerapan asynchronous programming pada AJAX.
+## Penerapan asynchronous programming pada AJAX.
 
 Pada Javascript, Asynchronous JavaScript and XMLHTTP atau biasa disebut AJAX merupakan salah satu konsep yang menerapkan metode asynchronous dalam menjalankan pekerjaannya. Biasa nya AJAX digunakan untuk melakukan permintaan data (request) dan menangani sebuah tanggapan (handling response), baik response dalam bentuk XML, Javascript ataupun JSON dari sebuah Rest API. AJAX atau Asynchronous JavaScript and XML adalah teknik yang digunakan untuk membuat website yang dinamis. Artinya website mampu mengupdate dan menampilkan data baru dari server tanpa perlu melakukan reload. 
 
@@ -58,7 +58,7 @@ Berikut merupakan kode untuk mengimplementasi ajax get (mengambil data json) pad
 
 ![image penjelasan-1](photo/tugas6-penjelasan-3.jpg)
 
-Berikut merupakan implemtasi ajax post dan sekaligus implemntasi asinkronus ajax (menampilkan kembali data yang di buat secara langsung pada elemen html tujuan)
+Berikut merupakan implementasi ajax post dan sekaligus implementasi asinkronus ajax (menampilkan kembali data yang di buat secara langsung pada elemen html tujuan)
 
 ![image penjelasan-1](photo/tugas6-penjelasan-4.jpg)
 
